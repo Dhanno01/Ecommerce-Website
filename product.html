@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Figma Store</title>
+    <link rel="stylesheet" href="css/categorystyles.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="navbar"></header>
+
+    <!--single product-->
+    <main id="showproducts">
+      <div class="product-page">
+        <div class="wrap-container">
+          <div class="image-gallery">
+            <div class="image-selector" id="imageSelector">
+              <!--Images will be inserted here-->
+            </div>
+            <div class="image-sizer">
+              <img
+                src=""
+                alt="Featured Image"
+                class="featured-image"
+                id="featuredImage"
+              />
+            </div>
+          </div>
+          <p class="tag" id="productCategory"></p>
+          <h2 class="tag1" id="productTitle"></h2>
+          <div class="product-form">
+            <form method="post" action="#">
+              <div class="radio-group">
+                <!--sizes-->
+                <div class="size-radio">
+                  <input
+                    type="radio"
+                    name="size"
+                    id="size-xs"
+                    value="XS"
+                    onchange="selectSize(this)"
+                  />
+                  <label for="size-xs" class="label">XS</label>
+                </div>
+                <div class="size-radio">
+                  <input
+                    type="radio"
+                    name="size"
+                    id="size-s"
+                    value="S"
+                    onchange="selectSize(this)"
+                  />
+                  <label for="size-s" class="label">S</label>
+                </div>
+                <div class="size-radio">
+                  <input
+                    type="radio"
+                    name="size"
+                    id="size-m"
+                    value="M"
+                    onchange="selectSize(this)"
+                  />
+                  <label for="size-m" class="label">M</label>
+                </div>
+                <div class="size-radio">
+                  <input
+                    type="radio"
+                    name="size"
+                    id="size-l"
+                    value="L"
+                    onchange="selectSize(this)"
+                  />
+                  <label for="size-l" class="label">L</label>
+                </div>
+                <div class="size-radio">
+                  <input
+                    type="radio"
+                    name="size"
+                    id="size-xl"
+                    value="XL"
+                    onchange="selectSize(this)"
+                  />
+                  <label for="size-xl" class="label">XL</label>
+                </div>
+                <div class="size-radio">
+                  <input
+                    type="radio"
+                    name="size"
+                    id="size-2xl"
+                    value="2XL"
+                    onchange="selectSize(this)"
+                  />
+                  <label for="size-2xl" class="label">2XL</label>
+                </div>
+              </div>
+              <!--quantity-->
+              <div class="quantity-wrapper">
+                <button
+                  class="quantity-button minus"
+                  type="button"
+                  aria-label="Reduce quantity"
+                  onclick="updateQuantity(-1)"
+                >
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="24"
+                      cy="24"
+                      r="23"
+                      stroke="black"
+                      stroke-width="2"
+                    ></circle>
+                    <path d="M16 24H32" stroke="black" stroke-width="2"></path>
+                  </svg>
+                </button>
+                <input
+                  type="number"
+                  name="quantity"
+                  min="1"
+                  id="quantity"
+                  value="1"
+                  onclick="updateQuantity()"
+                />
+
+                <button
+                  class="quantity-button plus"
+                  type="button"
+                  aria-label="Increase quantity"
+                  onclick="updateQuantity(1)"
+                >
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="24"
+                      cy="24"
+                      r="23"
+                      stroke="black"
+                      stroke-width="2"
+                    ></circle>
+                    <path d="M16 24H32" stroke="black" stroke-width="2"></path>
+                    <path d="M24 32V16" stroke="black" stroke-width="2"></path>
+                  </svg>
+                </button>
+              </div>
+              <button
+                class="addtocart button"
+                type="submit"
+                id="addToCartButton"
+                onclick="showContactForm(event)"
+              >
+                ADD Rs. <span id="productPrice">0.00</span>
+              </button>
+            </form>
+          </div>
+          <!--description-->
+          <div class="describe">
+            <p class="data1" id="productDescription"></p>
+            <div id="contactForm" style="display: none">
+              <form>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="First Name"
+                  required
+                  autofocus
+                />
+
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Last Name"
+                  required
+                />
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Phone Number"
+                  required
+                />
+
+                <input
+                  id="address"
+                  name="address"
+                  placeholder="Address"
+                  required
+                ></input>
+
+                <button type="submit" id="submit" name="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Form -->
+    </main>
+    <!--footer-->
+    <section id="footer"></section>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

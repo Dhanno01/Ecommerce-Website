@@ -1,0 +1,278 @@
+.product-page {
+    margin-bottom: 120px;
+    margin-top: 50px;
+}
+
+.wrap-container {
+    column-gap: 50px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(3, auto) 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.image-gallery {
+    column-gap: 20px;
+    display: grid;
+    grid-row: span 4;
+    grid-template-columns: auto 1fr;
+}
+
+.image-selector {
+    display: grid;
+    grid-template-columns: 100%;
+    height: fit-content;
+    row-gap: 10px;
+}
+
+.image-select {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    height: fit-content;
+    outline: none;
+    padding: 0;
+}
+
+.image {
+    border: 3px solid transparent;
+    border-radius: 20px;
+    display: block;
+    height: 90px;
+    object-fit: cover;
+    transition: border-color .3s;
+    width: 90px;
+}
+
+.featured-image {
+    border-radius: 120px;
+    width: 100%;
+    height: auto;
+}
+
+.image-sizer img {
+    height: auto;
+    width: 100%;
+}
+
+.tag {
+    background-color: #10a958;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 20px 10px;
+    text-transform: uppercase;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.tag1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    padding-top: 15px;
+}
+
+.product-form {
+    margin-top: 0;
+}
+
+.radio-group {
+    display: flex;
+    gap: 12px;
+}
+
+.radio-group:not(:first-child) {
+    margin-top: 20px;
+}
+
+.size-radio input {
+    display: none;
+    width: 100%;
+    padding: 10px 0rem
+}
+
+
+
+.size-radio .label {
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 50px;
+    justify-content: center;
+    opacity: 1;
+    padding-top: 2px;
+    transition: background-color .3s, color .3s;
+    width: 50px;
+}
+
+/* quantity */
+.quantity-wrapper {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    margin-top: 15px;
+}
+
+.quantity-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.quantity-button svg circle {
+    fill: white;
+    transition: fill .3s;
+}
+
+.quantity-button svg path {
+    transition: stroke .3s;
+}
+
+.quantity-button.minus.active svg circle,
+.quantity-button.plus.active svg circle {
+    fill: black;
+}
+
+.quantity-button.minus.active svg path,
+.quantity-button.plus.active svg path {
+    stroke: white;
+}
+
+.quantity-button:hover svg circle {
+    fill: black;
+}
+
+.quantity-button:hover svg path {
+    stroke: white;
+}
+
+.quantity-wrapper input {
+    border: none;
+
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 5px;
+    max-width: 60px;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.addtocart {
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 20px;
+    outline: none;
+    padding: 12px 40px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+
+.addtocart:not(:disabled):hover {
+    background-color: black;
+    color: white;
+}
+
+.product-page button {
+    transition: opacity .3s, background .3s, color .3s;
+}
+
+.describe {
+    line-height: 1.4;
+    margin-top: 25px;
+}
+
+.data1 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* extra */
+.selected-image {
+    border: 3px solid #000;
+    border-radius: 20px;
+}
+
+.selected-size {
+    background-color: #000;
+    color: #fff;
+}
+
+.quantity-button:focus,
+.size-radio .label:focus,
+.addtocart:focus,
+.addtocart:hover,
+button.image-select:focus {
+    outline: none;
+}
+
+#contactForm {
+    display: flex;
+    justify-content: center;
+    height: 25rem;
+
+    padding: 4rem;
+}
+
+#contactForm input {
+    width: 20rem;
+    border-radius: 45px;
+    height: 3rem;
+    outline: none;
+    border: 2px solid black;
+    background-color: transparent;
+    text-align: start;
+    padding-left: 16px;
+    margin-bottom: 25px;
+}
+
+#contactForm button {
+    width: 20rem;
+    height: 3rem;
+    border-radius: 45px;
+    outline: none;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#contactForm button:hover {
+    background-color: black;
+    color: white;
+}
+
+#contactForm input:focus {
+    background-color: black;
+    color: white;
+}
+
+@media(max-width:445px) {
+    .wrap-container {
+        grid-template-columns: 2fr;
+    }
+
+}
