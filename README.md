@@ -8,7 +8,7 @@ This project is a replica of The FIGMA Store. It consists of a homepage, categor
 
 ### Online
 
-You can view the project hosted on Vercel at: [The Figma Store](https://ecommerce-omega-lyart.vercel.app/)
+You can view the project hosted on Vercel at: [The Figma Store](https://ecommerce-website-hazel.vercel.app/)
 
 ### Locally
 
